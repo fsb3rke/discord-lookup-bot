@@ -52,8 +52,8 @@ const handle_discord = async (user_id) => {
 
   user_stats.username = user.username;
   user_stats.globalName = user.globalName;
-  user_stats.avatarURL = scale_image_size(user.avatarURL(), 1024);
-  user_stats.bannerURL = scale_image_size(user.bannerURL(), 1024);
+  user_stats.avatarURL = user.avatarURL() != undefined ? scale_image_size(user.avatarURL(), 1024) : "https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png";
+  user_stats.bannerURL = user.bannerURL() != undefined ? scale_image_size(user.bannerURL(), 1024) : "https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png";
   user_stats.createDate = String(user.createdAt);
   user_stats.isBot = user.bot;
 
